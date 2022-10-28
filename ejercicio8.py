@@ -57,9 +57,9 @@ def leerTemp(lst_temp):
         if (lstmax[i]==temp):
             lstDiasMax.append(i+1)
             return lstDiasMax
-        else:
-            print("No existe ningún día con esa temperatura.")
-        break
+    else:
+        print("No existe ningún día con esa temperatura.")
+        
 
      
 lst_temp=Temperatura()
