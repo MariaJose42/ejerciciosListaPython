@@ -60,7 +60,6 @@ def leerTemp(lst_temp):
     else:
         print("No existe ningún día con esa temperatura.")
         
-
      
 lst_temp=Temperatura()
 print(lst_temp)
