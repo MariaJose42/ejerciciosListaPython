@@ -29,7 +29,6 @@ def temp_media(lst_temp):
     return lstMedia
         
 
-
 def minTemperatura(lst_temp):
     lstmin=[]
     for i in lst_temp:
@@ -37,16 +36,33 @@ def minTemperatura(lst_temp):
     lstmin.sort()
     return lstmin[0]
 
+
 def diasminimos(lst_temp):
     mintodos=minTemperatura(lst_temp)
-    print(mintodos)
+    #print(mintodos)
     lstDias=[]
     for i in range(0,len(lst_temp)):
-        if (mintodos==lst_temp[i]):
-            print("test")
+        if (mintodos==lst_temp[i][0]):
             lstDias.append(i+1)
     return lstDias
 
+
+def leerTemp(lst_temp):
+    temp=float(input("Dime una temperatura:"))
+    lstDiasMax=[]
+    lstmax=[]
+    for i in lst_temp:
+        lstmax.append(i[1])
+    for i in range(0,len(lstmax)):
+        if (lstmax[i]==temp):
+            lstDiasMax.append(i+1)
+            return lstDiasMax
+        else:
+            print("No existe ningún día con esa temperatura.")
+        break
+
+     
 lst_temp=Temperatura()
 print(lst_temp)
 print(diasminimos(lst_temp))
+print(leerTemp(lst_temp))
